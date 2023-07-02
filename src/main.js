@@ -1,4 +1,4 @@
-import './assets/main.css'
+// import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -6,22 +6,22 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-// Vuetify
-import 'vuetify/styles'
-import '@mdi/font/css/materialdesignicons.css'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+// // Element Plus
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
+// import 'uno.css'
 
-const vuetify = createVuetify({
-  components,
-  directives,
-})
+// Import Tailwind
+// import './index.css'
+
+// Import Uno CSS
+import './index.css'
 
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(vuetify)
+app.use(ElementPlus)
 
 app.mount('#app')
